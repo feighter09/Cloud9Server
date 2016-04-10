@@ -1,0 +1,33 @@
+Name:                ControlVAuth
+Version:             0.1
+Synopsis:            yet another pasteboard
+Description:         A demo pasteboard intended to show off happstack-foundation
+Homepage:            http://www.happstack.com/
+License:             BSD3
+License-file:        LICENSE
+Author:              Jeremy Shaw
+Maintainer:          jeremy@n-heptane.com
+Category:            Happstack
+Build-type:          Simple
+Cabal-version:       >=1.6
+Data-files:
+        style.css
+
+Executable ControlVAuth
+  build-tools:       hsx2hs
+  Main-Is:           Main.hs
+  Build-Depends:     base < 5
+                     , acid-state
+                     , happstack-foundation   >= 0.5   && < 0.6
+                     , hsx2hs
+                     , jmacro                 >= 0.6.9 && < 0.7
+                     , ixset                  == 1.0.*
+                     , time                   >= 1.4   && < 1.6
+                     , text                   >= 0.11  && < 1.3
+                     , happstack-authenticate >= 2.3   && < 2.4
+                     , happstack-jmacro       >= 7.0   && < 7.1
+                     , hsp
+                     , happstack-hsp
+                     , filepath
+                     , lens
+                     ,  userid

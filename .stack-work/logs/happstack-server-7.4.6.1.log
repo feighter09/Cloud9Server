@@ -1,0 +1,326 @@
+Configuring happstack-server-7.4.6.1...
+Building happstack-server-7.4.6.1...
+Preprocessing library happstack-server-7.4.6.1...
+
+on the commandline: Warning:
+    -XOverlappingInstances is deprecated: instead use per-instance pragmas OVERLAPPING/OVERLAPPABLE/OVERLAPS
+
+src/Happstack/Server/SimpleHTTP.hs:3:14: Warning:
+    -XOverlappingInstances is deprecated: instead use per-instance pragmas OVERLAPPING/OVERLAPPABLE/OVERLAPS
+[ 1 of 38] Compiling Happstack.Server.Internal.LazyLiner ( src/Happstack/Server/Internal/LazyLiner.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Happstack/Server/Internal/LazyLiner.o )
+[ 2 of 38] Compiling Happstack.Server.Internal.SocketTH ( src/Happstack/Server/Internal/SocketTH.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Happstack/Server/Internal/SocketTH.o )
+[ 3 of 38] Compiling Happstack.Server.Internal.Socket ( src/Happstack/Server/Internal/Socket.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Happstack/Server/Internal/Socket.o )
+
+src/Happstack/Server/Internal/Socket.hs:39:1: Warning:
+    Defined but not used: ‘showHostAddress6’
+[ 4 of 38] Compiling Happstack.Server.Internal.LogFormat ( src/Happstack/Server/Internal/LogFormat.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Happstack/Server/Internal/LogFormat.o )
+[ 5 of 38] Compiling Happstack.Server.Internal.TimeoutManager ( src/Happstack/Server/Internal/TimeoutManager.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Happstack/Server/Internal/TimeoutManager.o )
+[ 6 of 38] Compiling Happstack.Server.Internal.TimeoutIO ( src/Happstack/Server/Internal/TimeoutIO.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Happstack/Server/Internal/TimeoutIO.o )
+[ 7 of 38] Compiling Happstack.Server.Internal.TimeoutSocket ( src/Happstack/Server/Internal/TimeoutSocket.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Happstack/Server/Internal/TimeoutSocket.o )
+[ 8 of 38] Compiling Happstack.Server.SURI.ParseURI ( src/Happstack/Server/SURI/ParseURI.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Happstack/Server/SURI/ParseURI.o )
+[ 9 of 38] Compiling Happstack.Server.SURI ( src/Happstack/Server/SURI.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Happstack/Server/SURI.o )
+[10 of 38] Compiling Happstack.Server.Internal.RFC822Headers ( src/Happstack/Server/Internal/RFC822Headers.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Happstack/Server/Internal/RFC822Headers.o )
+[11 of 38] Compiling Paths_happstack_server ( .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/autogen/Paths_happstack_server.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Paths_happstack_server.o )
+[12 of 38] Compiling Happstack.Server.Internal.Clock ( src/Happstack/Server/Internal/Clock.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Happstack/Server/Internal/Clock.o )
+
+src/Happstack/Server/Internal/Clock.hs:9:1: Warning:
+    The import of ‘Control.Applicative’ is redundant
+      except perhaps to import instances from ‘Control.Applicative’
+    To import instances alone, use: import Control.Applicative()
+[13 of 38] Compiling Happstack.Server.Internal.Cookie ( src/Happstack/Server/Internal/Cookie.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Happstack/Server/Internal/Cookie.o )
+[14 of 38] Compiling Happstack.Server.Internal.Types ( src/Happstack/Server/Internal/Types.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Happstack/Server/Internal/Types.o )
+
+src/Happstack/Server/Internal/Types.hs:22:1: Warning:
+    Module ‘Control.Monad.Error’ is deprecated:
+      Use Control.Monad.Except instead
+
+src/Happstack/Server/Internal/Types.hs:38:1: Warning:
+    The import of ‘Word’ from module ‘Data.Word’ is redundant
+
+src/Happstack/Server/Internal/Types.hs:246:10: Warning:
+    In the use of type constructor or class ‘Error’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Happstack/Server/Internal/Types.hs:246:10: Warning:
+    In the use of type constructor or class ‘Error’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+[15 of 38] Compiling Happstack.Server.Internal.Multipart ( src/Happstack/Server/Internal/Multipart.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Happstack/Server/Internal/Multipart.o )
+[16 of 38] Compiling Happstack.Server.Internal.MessageWrap ( src/Happstack/Server/Internal/MessageWrap.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Happstack/Server/Internal/MessageWrap.o )
+[17 of 38] Compiling Happstack.Server.Types ( src/Happstack/Server/Types.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Happstack/Server/Types.o )
+[18 of 38] Compiling Happstack.Server.Internal.Monads ( src/Happstack/Server/Internal/Monads.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Happstack/Server/Internal/Monads.o )
+
+src/Happstack/Server/Internal/Monads.hs:14:1: Warning:
+    Module ‘Control.Monad.Error’ is deprecated:
+      Use Control.Monad.Except instead
+
+src/Happstack/Server/Internal/Monads.hs:55:1: Warning:
+    The import of ‘||’ from module ‘Prelude’ is redundant
+
+src/Happstack/Server/Internal/Monads.hs:384:37: Warning:
+    In the use of type constructor or class ‘ErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Happstack/Server/Internal/Monads.hs:404:31: Warning:
+    In the use of type constructor or class ‘ErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Happstack/Server/Internal/Monads.hs:537:25: Warning:
+    In the use of data constructor ‘ErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Happstack/Server/Internal/Monads.hs:538:36: Warning:
+    In the use of ‘runErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Happstack/Server/Internal/Monads.hs:543:30: Warning:
+    In the use of data constructor ‘ErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Happstack/Server/Internal/Monads.hs:543:62: Warning:
+    In the use of ‘runErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Happstack/Server/Internal/Monads.hs:555:54: Warning:
+    In the use of ‘runErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Happstack/Server/Internal/Monads.hs:559:17: Warning:
+    In the use of data constructor ‘ErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Happstack/Server/Internal/Monads.hs:777:11: Warning:
+    In the use of type constructor or class ‘Error’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Happstack/Server/Internal/Monads.hs:777:51: Warning:
+    In the use of type constructor or class ‘ErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Happstack/Server/Internal/Monads.hs:779:17: Warning:
+    In the use of ‘mapErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Happstack/Server/Internal/Monads.hs:781:11: Warning:
+    In the use of type constructor or class ‘Error’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Happstack/Server/Internal/Monads.hs:781:55: Warning:
+    In the use of type constructor or class ‘ErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Happstack/Server/Internal/Monads.hs:784:19: Warning:
+    In the use of ‘mapErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Happstack/Server/Internal/Monads.hs:791:11: Warning:
+    In the use of type constructor or class ‘Error’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Happstack/Server/Internal/Monads.hs:791:49: Warning:
+    In the use of type constructor or class ‘ErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+[19 of 38] Compiling Happstack.Server.Internal.Handler ( src/Happstack/Server/Internal/Handler.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Happstack/Server/Internal/Handler.o )
+[20 of 38] Compiling Happstack.Server.Client ( src/Happstack/Server/Client.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Happstack/Server/Client.o )
+[21 of 38] Compiling Happstack.Server.Internal.Listen ( src/Happstack/Server/Internal/Listen.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Happstack/Server/Internal/Listen.o )
+
+src/Happstack/Server/Internal/Listen.hs:15:1: Warning:
+    The import of ‘SockAddr’ from module ‘Network.Socket’ is redundant
+[22 of 38] Compiling Happstack.Server.Internal.LowLevel ( src/Happstack/Server/Internal/LowLevel.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Happstack/Server/Internal/LowLevel.o )
+[23 of 38] Compiling Happstack.Server.Cookie ( src/Happstack/Server/Cookie.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Happstack/Server/Cookie.o )
+[24 of 38] Compiling Happstack.Server.Response ( src/Happstack/Server/Response.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Happstack/Server/Response.o )
+
+src/Happstack/Server/Response.hs:39:1: Warning:
+    The import of ‘Happstack.Server.Types’ is redundant
+      except perhaps to import instances from ‘Happstack.Server.Types’
+    To import instances alone, use: import Happstack.Server.Types()
+[25 of 38] Compiling Happstack.Server.RqData ( src/Happstack/Server/RqData.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Happstack/Server/RqData.o )
+
+src/Happstack/Server/RqData.hs:61:1: Warning:
+    The import of ‘<*>, pure, Applicative, <$>’
+    from module ‘Control.Applicative’ is redundant
+
+src/Happstack/Server/RqData.hs:70:1: Warning:
+    Module ‘Control.Monad.Error’ is deprecated:
+      Use Control.Monad.Except instead
+
+src/Happstack/Server/RqData.hs:73:1: Warning:
+    The qualified import of ‘Data.ByteString.Char8’ is redundant
+      except perhaps to import instances from ‘Data.ByteString.Char8’
+    To import instances alone, use: import Data.ByteString.Char8()
+
+src/Happstack/Server/RqData.hs:80:1: Warning:
+    The import of ‘Data.Monoid’ is redundant
+      except perhaps to import instances from ‘Data.Monoid’
+    To import instances alone, use: import Data.Monoid()
+
+src/Happstack/Server/RqData.hs:93:11: Warning:
+    In the use of type constructor or class ‘Error’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Happstack/Server/RqData.hs:97:21: Warning:
+    In the use of type constructor or class ‘Error’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Happstack/Server/RqData.hs:102:21: Warning:
+    In the use of type constructor or class ‘Error’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Happstack/Server/RqData.hs:121:10: Warning:
+    In the use of type constructor or class ‘Error’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Happstack/Server/RqData.hs:121:10: Warning:
+    In the use of type constructor or class ‘Error’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Happstack/Server/RqData.hs:202:20: Warning:
+    In the use of type constructor or class ‘Error’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Happstack/Server/RqData.hs:202:56: Warning:
+    In the use of type constructor or class ‘ErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Happstack/Server/RqData.hs:204:21: Warning:
+    In the use of ‘mapErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Happstack/Server/RqData.hs:282:36: Warning:
+    In the use of ‘strMsg’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Happstack/Server/RqData.hs:291:36: Warning:
+    In the use of ‘strMsg’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Happstack/Server/RqData.hs:339:36: Warning:
+    In the use of ‘strMsg’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Happstack/Server/RqData.hs:361:39: Warning:
+    In the use of ‘strMsg’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Happstack/Server/RqData.hs:374:35: Warning:
+    In the use of ‘strMsg’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Happstack/Server/RqData.hs:449:37: Warning:
+    In the use of ‘strMsg’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Happstack/Server/RqData.hs:510:38: Warning:
+    In the use of ‘strMsg’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+[26 of 38] Compiling Happstack.Server.Monads ( src/Happstack/Server/Monads.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Happstack/Server/Monads.o )
+
+src/Happstack/Server/Monads.hs:40:1: Warning:
+    The import of ‘Applicative’
+    from module ‘Control.Applicative’ is redundant
+
+src/Happstack/Server/Monads.hs:42:1: Warning:
+    Module ‘Control.Monad.Error’ is deprecated:
+      Use Control.Monad.Except instead
+
+src/Happstack/Server/Monads.hs:53:1: Warning:
+    The import of ‘Data.Monoid’ is redundant
+      except perhaps to import instances from ‘Data.Monoid’
+    To import instances alone, use: import Data.Monoid()
+
+src/Happstack/Server/Monads.hs:72:24: Warning:
+    In the use of type constructor or class ‘Error’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Happstack/Server/Monads.hs:72:48: Warning:
+    In the use of type constructor or class ‘ErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+[27 of 38] Compiling Happstack.Server.Auth ( src/Happstack/Server/Auth.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Happstack/Server/Auth.o )
+[28 of 38] Compiling Happstack.Server.Error ( src/Happstack/Server/Error.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Happstack/Server/Error.o )
+
+src/Happstack/Server/Error.hs:4:1: Warning:
+    Module ‘Control.Monad.Error’ is deprecated:
+      Use Control.Monad.Except instead
+
+src/Happstack/Server/Error.hs:25:26: Warning:
+    In the use of type constructor or class ‘ErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Happstack/Server/Error.hs:28:12: Warning:
+    In the use of ‘runErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Happstack/Server/Error.hs:51:29: Warning:
+    In the use of type constructor or class ‘Error’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Happstack/Server/Error.hs:51:84: Warning:
+    In the use of type constructor or class ‘ErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Happstack/Server/Error.hs:53:32: Warning:
+    In the use of ‘runErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+[29 of 38] Compiling Happstack.Server.Proxy ( src/Happstack/Server/Proxy.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Happstack/Server/Proxy.o )
+[30 of 38] Compiling Happstack.Server.Validation ( src/Happstack/Server/Validation.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Happstack/Server/Validation.o )
+[31 of 38] Compiling Happstack.Server.FileServe.BuildingBlocks ( src/Happstack/Server/FileServe/BuildingBlocks.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Happstack/Server/FileServe/BuildingBlocks.o )
+
+src/Happstack/Server/FileServe/BuildingBlocks.hs:57:1: Warning:
+    The import of ‘Control.Applicative’ is redundant
+      except perhaps to import instances from ‘Control.Applicative’
+    To import instances alone, use: import Control.Applicative()
+[32 of 38] Compiling Happstack.Server.FileServe ( src/Happstack/Server/FileServe.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Happstack/Server/FileServe.o )
+[33 of 38] Compiling Happstack.Server.Routing ( src/Happstack/Server/Routing.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Happstack/Server/Routing.o )
+[34 of 38] Compiling Happstack.Server.SimpleHTTP ( src/Happstack/Server/SimpleHTTP.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Happstack/Server/SimpleHTTP.o )
+[35 of 38] Compiling Happstack.Server.Internal.Compression ( src/Happstack/Server/Internal/Compression.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Happstack/Server/Internal/Compression.o )
+[36 of 38] Compiling Happstack.Server.I18N ( src/Happstack/Server/I18N.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Happstack/Server/I18N.o )
+
+src/Happstack/Server/I18N.hs:6:1: Warning:
+    The import of ‘Control.Applicative’ is redundant
+      except perhaps to import instances from ‘Control.Applicative’
+    To import instances alone, use: import Control.Applicative()
+[37 of 38] Compiling Happstack.Server.Compression ( src/Happstack/Server/Compression.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Happstack/Server/Compression.o )
+[38 of 38] Compiling Happstack.Server ( src/Happstack/Server.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Happstack/Server.o )
+In-place registering happstack-server-7.4.6.1...
+Installing library in
+/Users/austin/Other/Cloud9Server/.stack-work/install/x86_64-osx/lts-5.11/7.10.3/lib/x86_64-osx-ghc-7.10.3/happstack-server-7.4.6.1-JW7uNtpujTb80MVOUeBmoY
+Registering happstack-server-7.4.6.1...

@@ -44,6 +44,8 @@ Playlist json
 
 Song json
   name String
+  artist String
+  duration Double
   url String
   deriving Generic Show Eq Data Typeable
 |]
@@ -57,6 +59,11 @@ getBody = do
     Just rqbody -> return . unBody $ rqbody
     Nothing     -> return ""
 
+parseBody :: FromJSON a => ServerPart (Maybe a)
+parseBody = do
+  body <- getBody
+  return . A.decode $ body
+
 main :: IO ()
 main = do
   migrateDB
@@ -67,19 +74,24 @@ migrateDB = runSqlite "db" $ do
   runMigration migrateAll
 
 startServer :: IO ()
-startServer = simpleHTTP nullConf $ msum routes
+startServer = simpleHTTP nullConf $ routes
 
-routes :: [ServerPartT IO Response]
-routes = 
-  [
-    -- dir "playlists" playlists
-    dir "users" usersHandler
+routes :: ServerPartT IO Response
+routes = msum
+  [ dir "users" usersHandler
+  , dir "playlists" playlistsHandler
   ]  
 
 usersHandler :: ServerPart Response
 usersHandler = msum
   [ method GET >> getUsers
   , method POST >> postUser
+  ]
+
+playlistsHandler :: ServerPart Response
+playlistsHandler = msum
+  [ method GET >> fetchPlaylistHandler
+  , method POST >> playlistPostHandler
   ]
 
 getUsers :: ServerPart Response
@@ -89,22 +101,68 @@ getUsers = do
 
 postUser :: ServerPart Response
 postUser = do
-  body <- getBody -- it's a ByteString
-  let user = fromJust $ A.decode body :: User -- how to parse json
-  userKey <- saveUser user
-  ok $ toResponse $ A.encode userKey -- how to send json back. 
+  user <- parseBody
+  case user of
+    Just user -> saveUser user >>= (ok . toResponse . A.encode)
+    Nothing   -> badRequest . toResponse $ ("Could not parse request" :: String)
 
 fetchAllUsers :: ServerPart [(Entity User)]
 fetchAllUsers = runSqlite "db" $ selectList [] []
 
-playlists :: ServerPart Response
-playlists = do
-  body <- getBody -- it's a ByteString
-  let user = fromJust $ A.decode body :: User -- how to parse json
-  userId <- saveUser user
-  ok $ toResponse $ A.encode user -- how to send json back. 
-  -- ok $ toResponse $ fromSqlKey userId
-
 saveUser :: User -> ServerPart (Key User)
 saveUser user = runSqlite "db" $ do
   insert $ user
+
+fetchPlaylistHandler :: ServerPart Response
+fetchPlaylistHandler = path $ fetchPlaylist
+
+fetchPlaylist :: Int -> ServerPart Response
+fetchPlaylist playlistId = do
+  playlistEntity <- runSqlite "db" $ do
+    let playlistKey = toSqlKey $ fromIntegral playlistId :: Key Playlist
+    get playlistKey
+  case playlistEntity of
+    Just playlist -> ok $ toResponse $ A.encode $ playlistEntity
+    Nothing       -> badRequest $ toResponse $ ("Playlist does not exist" :: String) 
+
+playlistPostHandler :: ServerPart Response
+playlistPostHandler = msum
+  [ (path $ \playlistPath -> dir "tracks" $ addSongToPlaylistHandler (read playlistPath :: Int))
+  , createPlaylistHandler
+  ]
+
+addSongToPlaylistHandler :: Int -> ServerPart Response
+addSongToPlaylistHandler playlistId = do
+  song <- fmap fromJust parseBody
+  result <- addSongToPlaylist playlistId song
+  case result of 
+    Just _  -> ok $ toResponse $ ("Track added" :: String)
+    Nothing -> badRequest $ toResponse ("Playlist does not exist" :: String) 
+  -- case song of 
+  --   Just song ->
+  --     case addSongToPlaylist playlistId song of
+  --       Just _  -> return $ ok $ toResponse $ ("Track added" :: String)
+  --       Nothing -> return $ badRequest $ toResponse ("Playlist does not exist" :: String) 
+  --   Nothing -> badRequest $ toResponse ("Playlist does not exist" :: String) 
+
+createPlaylistHandler :: ServerPart Response
+createPlaylistHandler = do
+  playlist <- parseBody
+  case playlist of 
+    Just playlist -> do
+      runSqlite "db" $ do
+        insert $ (playlist :: Playlist)
+      ok $ toResponse $ ("Playlist added" :: String)
+    Nothing       -> badRequest $ toResponse ("Couldn't parse playlist" :: String) 
+
+addSongToPlaylist :: Int -> Song -> ServerPart (Maybe ())
+addSongToPlaylist playlistId song = runSqlite "db" $ do
+    let playlistKey = toSqlKey $ fromIntegral playlistId :: Key Playlist
+    playlist <- get playlistKey
+    case playlist of
+      Just playlist -> do
+        let newSongs = song : (playlistSongs playlist)
+        update playlistKey [PlaylistSongs =. newSongs]
+        return $ Just ()
+      Nothing       -> return $ Nothing
+
